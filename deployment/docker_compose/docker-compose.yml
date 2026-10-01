@@ -45,7 +45,7 @@ name: onyx
 
 services:
   api_server:
-    image: onyxdotapp/onyx-backend:edge
+    image: onyxdotapp/onyx-backend:v4.8.2
     build:
       context: ../../backend
       dockerfile: Dockerfile
@@ -144,7 +144,7 @@ services:
       - file-system:/app/file-system
 
   background:
-    image: onyxdotapp/onyx-backend:edge
+    image: onyxdotapp/onyx-backend:v4.8.2
     build:
       context: ../../backend
       dockerfile: Dockerfile
@@ -216,7 +216,7 @@ services:
     #   - ${CA_CERT_PATH:-./custom-ca.crt}:/etc/ssl/certs/custom-ca.crt:ro
 
   web_server:
-    image: onyxdotapp/onyx-web-server:edge
+    image: onyxdotapp/onyx-web-server:v4.8.2
     build:
       context: ../../web
       dockerfile: Dockerfile
@@ -296,7 +296,7 @@ services:
   #     - mcp_server_logs:/var/log/onyx
 
   inference_model_server:
-    image: onyxdotapp/onyx-model-server:edge
+    image: onyxdotapp/onyx-model-server:v4.8.2
     build:
       context: ../../backend
       dockerfile: Dockerfile.model_server
@@ -339,7 +339,7 @@ services:
       start_period: 600s
 
   indexing_model_server:
-    image: onyxdotapp/onyx-model-server:edge
+    image: onyxdotapp/onyx-model-server:v4.8.2
     build:
       context: ../../backend
       dockerfile: Dockerfile.model_server
